@@ -9,9 +9,7 @@ body {
 }
 
 .container {
-    text-align: center;
     justify-content: space-between;
-    display: flex;
     padding: 20px;
     background: rgb(223, 225, 235);
     border-radius: 50px;
