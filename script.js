@@ -21,3 +21,9 @@ document.getElementById('downloadButton').style.display = 'block';
 });
 
 });
+const loader = document.getElementsByClassName('loader')[0];
+
+window.addEventListener('load', function () {
+  loader.style.display = 'none';
+  });
+
