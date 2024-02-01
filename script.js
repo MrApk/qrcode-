@@ -1,7 +1,7 @@
 document.getElementById('qrForm').addEventListener('submit', async function (event) {
   event.preventDefault();
 document.getElementById('downloadButton').style.display = 'block';
-  const data = document.getElementById('data').value;
+  const data = document.getElementById('input').value;
   const response = await fetch('/api/generate', {
       method: 'POST',
       headers: {
