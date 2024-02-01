@@ -178,4 +178,10 @@ form {
 
 #result {
     margin-top: 50px;
+    margin-bottom: 45px;
+    display: flex;
+    justify-content: center;
+}
+#result img {
+    border-radius: 10px;
 }
