@@ -23,6 +23,10 @@ app.post('/api/generate', async (req, res) => {
     }
 });
 
+app.use((req, res) => {
+    res.status(404).sendFile(path.join(__dirname, '404.html'));
+});
+
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
