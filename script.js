@@ -32,7 +32,7 @@ function updateOnlineStatus() {
             if (navigator.onLine) {
                 offlineStatus.style.display = 'none';
             } else {
-                offlineStatus.style.display = 'block';
+                offlineStatus.style.display = 'flex';
             }
         }
 
