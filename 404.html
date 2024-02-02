@@ -1,1 +1,53 @@
-<h1>404 error</h1>
+<!-- 404.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>404 page not Found</title>
+</head>
+<body>
+    <div id="offline-status" style="display: none;">
+        <div class="container">
+        <h1>No Internet Connection</h1>
+        <p>Please check your internet connection and try again.</p>
+        </div>
+    </div>
+<div class="loader">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+  <div class="container">
+    <h1>ERROR 404 PAGE NOT FOUND</h1>
+    <div class="btn-12 co">
+    <a href="/" class="link"><span>Go Back To Home Page</span></a>
+  </div>
+  </div>
+<script>
+    const loader = document.getElementsByClassName('loader')[0];
+
+window.addEventListener('load', function () {
+  loader.style.display = 'none';
+  });
+
+function updateOnlineStatus() {
+            const offlineStatus = document.getElementById('offline-status');
+            if (navigator.onLine) {
+                offlineStatus.style.display = 'none';
+            } else {
+                offlineStatus.style.display = 'flex';
+            }
+        }
+
+        window.addEventListener('online', updateOnlineStatus);
+        window.addEventListener('offline', updateOnlineStatus);
+
+        // Initial check
+        updateOnlineStatus();
+
+</script>
+</body>
+
+</html>
