@@ -23,8 +23,8 @@ app.post('/api/generate', async (req, res) => {
     }
 });
 
-app.use((req, res) => {
-    res.status(404).sendFile(__dirname, '404.html');
+app.get('/*', (req, res) => {
+    res.sendFile(__dirname + '/404.html');
 });
 
 app.listen(port, () => {
