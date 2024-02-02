@@ -8,6 +8,18 @@ body {
     height: 100vh;
     width: 100vw;
 }
+#offline-status {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  position: absolute;
+  z-index: 99;
+
+}
+
 .loader {
   display: flex;
   align-items: center;
@@ -224,4 +236,18 @@ form {
 }
 #result img {
     border-radius: 10px;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+.link:hover {
+  color: white;
+}
+
+.co{
+  width: 305px;
+  margin: 79px;
 }
