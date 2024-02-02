@@ -27,3 +27,17 @@ window.addEventListener('load', function () {
   loader.style.display = 'none';
   });
 
+function updateOnlineStatus() {
+            const offlineStatus = document.getElementById('offline-status');
+            if (navigator.onLine) {
+                offlineStatus.style.display = 'none';
+            } else {
+                offlineStatus.style.display = 'block';
+            }
+        }
+
+        window.addEventListener('online', updateOnlineStatus);
+        window.addEventListener('offline', updateOnlineStatus);
+
+        // Initial check
+        updateOnlineStatus();
